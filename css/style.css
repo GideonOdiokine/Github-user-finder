@@ -1,0 +1,487 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+
+header {
+  background-color: #161b22;
+  padding: 14px 25px;
+  height: auto;
+  overflow: hidden;
+}
+#burger {
+  display: none;
+}
+.fixedNav.repo-nav {
+  width: 100%;
+  transition: width 0.9s ease-in;
+  background-color: #fff;
+  position: fixed;
+  top: -10px;
+  /* z-index: 111; */
+}
+
+a {
+  text-decoration: none;
+}
+
+.time-3-icon {
+  fill: #fff;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+.nav-top {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.dropdown-caret {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  vertical-align: middle;
+  content: "";
+  border-top-style: solid;
+  border-top-width: 4px;
+  border-right: 4px solid transparent;
+  border-bottom: 0px solid transparent;
+  border-left: 4px solid transparent;
+  position: relative;
+}
+#dropdown {
+  top: -4px;
+}
+.nav ul {
+  display: flex;
+}
+.nav li a {
+  display: block;
+  padding-right: 12px;
+  color: #fff;
+  font-weight: 300;
+  font-size: 15px;
+  font-family: tahoma;
+}
+
+.icons {
+  display: flex;
+  padding-left: 20px;
+  /* padding-top: 10px; */
+  align-items: center;
+}
+.mail-status {
+  position: relative;
+  top: 6px;
+  left: 6px;
+  z-index: 2;
+  display: block;
+  width: 10px;
+  height: 10px;
+  color: var(--color-text-white);
+  background-image: linear-gradient(#54a3ff, #006eed);
+  background-clip: padding-box;
+  border: 2px solid var(--color-header-bg);
+  border-radius: 50%;
+}
+#navImg {
+  border-radius: 50px;
+}
+li {
+  display: flex;
+  flex: none;
+}
+.icons li a {
+  display: block;
+  padding: 0 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+}
+form {
+  position: relative;
+}
+form input {
+  width: 250px;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid rgb(158, 157, 157);
+  background-color: rgb(10, 15, 20);
+  outline: none;
+  border: 0.5px solid #151c24;
+  position: relative;
+  margin: 0 20px;
+  transition: 0.4s;
+}
+form input.active {
+  width: 400px;
+  border: 1px solid #388bfd;
+}
+form input::placeholder {
+  padding-left: 8px;
+  color: #f6fcf6;
+  opacity: 0.6;
+}
+form #btnn {
+  position: absolute;
+  right: 20px;
+  padding: 0 8px;
+  color: #fff;
+  top: 5px;
+}
+
+/* REPOSITRIES STYLE */
+section .repo-nav {
+  z-index: 20;
+}
+.repo-nav .repos-menu {
+  display: grid;
+  grid-template-columns: repeat(5, 140px);
+  padding-top: 30px;
+  padding-left: 195px;
+  justify-items: center;
+  z-index: 33;
+}
+/* .repo-nav .repos-menu > *:first-child {
+  visibility: hidden;
+  padding: 20px;
+} */
+.repo-nav .repos-menu a {
+  cursor: pointer;
+  padding-bottom: 15px;
+}
+.repo-nav::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: rgb(43, 46, 51);
+  opacity: 0.5;
+}
+.UnderlineNav-item {
+  background-color: initial;
+  border: 0;
+  border-bottom: 3px solid #f9826c;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+}
+.d-flex {
+  display: flex;
+  padding: 50px;
+}
+.avatar-img-content {
+  position: relative;
+  top: -80px;
+  padding-right: 20px;
+  line-height: 1.6rem;
+  min-height: 100vh;
+  z-index: 30;
+}
+.avatar-img-content .avatar-content h2 {
+  padding-top: 10px;
+}
+.avatar-img-content .avatar-content p {
+  padding: 17px 5px;
+}
+.avatar-img-content img {
+  border-radius: 50%;
+  background-size: 260px;
+  background-position: center;
+}
+
+.repos {
+  padding-left: 10px;
+  width: 100%;
+}
+#input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 0.5px solid #161b22;
+}
+.repos p {
+  padding-top: 15px;
+}
+.repos p span {
+  font-weight: bold;
+}
+.underline1 {
+  border-bottom: 1px solid #2b2e33;
+  width: 26%;
+  padding-bottom: 15px;
+}
+.repo-info {
+  cursor: pointer;
+  position: relative;
+  /* border-bottom: 0.2px solid #2b2e33; */
+}
+.underline {
+  width: 100%;
+  opacity: 0.4;
+  border-bottom: 1px solid #2b2e33;
+}
+.repo-info .repo-detail {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.repo-detail a {
+  padding-top: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: blue;
+}
+.repo-detail button {
+  padding: 8px 10px;
+  line-height: 0;
+}
+.html-color {
+  background-color: rgb(233, 60, 60);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-right: 5px;
+}
+.repo-detail-info {
+  line-height: 4rem;
+  padding-bottom: 12px;
+}
+.repo-detail-info .d-flex {
+  padding: 0;
+  align-items: center;
+}
+.nav-bottom {
+  display: none;
+  width: 100%;
+  top: 20px;
+  position: relative;
+  padding-bottom: 40px;
+}
+/* .mini-nav{
+  
+} */
+.login-div {
+  width: 370px;
+  padding: 60px 35px 35px 35px;
+  margin: 100px auto;
+  border-radius: 40px;
+  background: #ecf0f3;
+  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+  height: 500px;
+}
+.logo {
+  background: url(images/ring.jpg);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  box-shadow: 
+    /* logo shadow */ 0px 0px 2px #5f5f5f,
+    /* Offset */ 0px 0px 0px 5px #ecf0f3,
+    /* bottom right */ 8px 8px 15px #a7aaaf, /* top left */ -8px -8px 15px #fff;
+}
+.title {
+  text-align: center;
+  font-size: 28px;
+  padding-top: 24px;
+  letter-spacing: 0.5px;
+}
+.sub-title {
+  text-align: center;
+  font-size: 15px;
+  padding-top: 7px;
+  letter-spacing: 3px;
+}
+.fields {
+  width: 100%;
+  padding: 60px 5px 5px 5px;
+}
+.fields input::placeholder {
+  padding-left: 20px;
+}
+.fields input {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  color: #555;
+  padding: 20px 10px 20px 5px;
+}
+.username,
+.password {
+  margin-bottom: 30px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+}
+.signin-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+  text-align: center;
+  background: #24cfaa;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
+  transition: 0.5s;
+}
+.signin-button:hover {
+  background: #2fdbb6;
+}
+.signin-button:active {
+  background: #1da88a;
+}
+.link a:hover {
+  color: green;
+}
+.link {
+  padding-top: 20px;
+  text-align: center;
+}
+.link a {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 15px;
+}
+#bg{
+  display: none;
+}
+@media (max-width: 887px) {
+  header {
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .nav-top {
+    display: block;
+  }
+  header .nav {
+    display: none;
+  }
+  header .hidden {
+    display: none;
+  }
+  #burger {
+    display: block;
+    height: fit-content;
+    cursor: pointer;
+  }
+  .nav-top {
+    align-items: stretch;
+  }
+  .nav-bottom.active {
+    display: block;
+  }
+  .time-3-icon {
+    position: absolute;
+    top: 25px;
+    right: 24px;
+  }
+  header #logo {
+    position: absolute;
+    left: 47%;
+  }
+  .icons {
+    padding-left: 0;
+  }
+  header .flex {
+    align-items: stretch;
+  }
+  form input {
+    width: 100%;
+    margin: 0;
+    padding: 6px;
+  }
+  form #btnn {
+    right: 10px;
+  }
+  .navbar {
+    padding-top: 15px;
+  }
+  .navbar ul li {
+    padding: 10px 0;
+  }
+  .navbar ul li:first-child {
+    border-top: 1px solid #21262d;
+  }
+  .navbar ul li {
+    border-bottom: 1px solid #21262d;
+    padding: 10px 0;
+  }
+  .navbar ul li a {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2rem;
+  }
+  .mail-status {
+    position: absolute;
+    left: 95%;
+    top: 22px;
+  }
+  .d-flex {
+    padding: 20px;
+  }
+  section .d-flex {
+    flex-wrap: wrap;
+  }
+  .avatar-img-content {
+    min-height: auto;
+    top: 50%;
+  }
+  .repo-nav .repos-menu {
+    display: none;
+  }
+}
+@media (max-width: 412px) {
+  .avatar-img-content img {
+    width: 80px;
+    height: 80px;
+  }
+  .avatar-img-content {
+    /* top: -100px; */
+    display: flex;
+  }
+  .avatar-content h2 {
+    font-size: 20px;
+    padding-left: 10px;
+    font-weight: bolder;
+  }
+  .avatar-content span {
+    padding-left: 10px;
+  }
+  .repos {
+    padding-left: 0;
+    padding-top: 80px;
+    /* width: 100%; */
+  }
+  .mail-status {
+    position: absolute;
+    left: 90%;
+    top: 22px;
+  }
+}
